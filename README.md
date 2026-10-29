@@ -2,9 +2,9 @@
 
 *English · [Español](README.es.md)*
 
-**[Live demo](https://huggingface.co/spaces/JesusRLGonzalez/predictive-quality-mlops)** | **[Project page](https://jesusgonzalezmexdata-ux.github.io/predictive-quality-mlops/)**
+**[Live demo](https://huggingface.co/spaces/JesusRLGonzalez/predictive-quality-mlops)** | **[Project page](https://jesusrlgonzalez.github.io/predictive-quality-mlops/)**
 
-**An end-to-end decision-support system for industrial quality:** it predicts which semiconductor lots (SECOM) are at risk of failing, translates the result into pesos saved or spent, serves it as an API and a dashboard, and watches its own degradation. Predictive maintenance on NASA C-MAPSS lives in its own repository: [predictive-maintenance-survival-cmapss](https://github.com/jesusgonzalezmexdata-ux/predictive-maintenance-survival-cmapss).
+**An end-to-end decision-support system for industrial quality:** it predicts which semiconductor lots (SECOM) are at risk of failing, translates the result into pesos saved or spent, serves it as an API and a dashboard, and watches its own degradation. Predictive maintenance on NASA C-MAPSS lives in its own repository: [predictive-maintenance-survival-cmapss](https://github.com/jesusrlgonzalez/predictive-maintenance-survival-cmapss).
 
 ## Executive summary
 The system turns data from 590 sensors into a **decision per lot** (release, monitor, hold) with its action and its ISO 9001 reference, measures the effect on **cost of poor quality (COPQ)** and warns when the model stops being reliable. The differentiator is not the algorithm: it is the **decision taxonomy**, the **visible uncertainty** and the **scrutiny log** of what failed and was corrected.

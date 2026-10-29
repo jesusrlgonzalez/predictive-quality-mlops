@@ -8,8 +8,8 @@ authors:
 license: MIT
 version: "1.2.0"
 date-released: "2026-10-17"
-repository-code: "https://github.com/jesusgonzalezmexdata-ux/predictive-quality-mlops"
-url: "https://jesusgonzalezmexdata-ux.github.io/predictive-quality-mlops/"
+repository-code: "https://github.com/jesusrlgonzalez/predictive-quality-mlops"
+url: "https://jesusrlgonzalez.github.io/predictive-quality-mlops/"
 keywords:
   - quality control
   - mlops

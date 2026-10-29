@@ -20,9 +20,9 @@ CSS = """
 
 PIE = (
     '<footer class="pie">© 2026 Jesús R. L. González · Código bajo '
-    '<a href="https://github.com/jesusgonzalezmexdata-ux/predictive-quality-mlops/blob/main/LICENSE" target="_blank" rel="noopener">licencia MIT</a>'
+    '<a href="https://github.com/jesusrlgonzalez/predictive-quality-mlops/blob/main/LICENSE" target="_blank" rel="noopener">licencia MIT</a>'
     ' · Caso SECOM: datos públicos UCI; procesos de ejemplo simulados · '
-    '<a href="https://github.com/jesusgonzalezmexdata-ux/predictive-quality-mlops" target="_blank" rel="noopener">Código fuente</a></footer>'
+    '<a href="https://github.com/jesusrlgonzalez/predictive-quality-mlops" target="_blank" rel="noopener">Código fuente</a></footer>'
 )
 
 

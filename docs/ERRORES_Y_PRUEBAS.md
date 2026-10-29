@@ -15,4 +15,4 @@
 | El lote de mayor riesgo se debía a un sensor a +111 σ | Valor extremo, probable error de medición | Guarda de calidad de dato en el dashboard: verificar la lectura antes de retener |
 | El PR-AUC no cae de forma monótona con ruido o corrimiento | 17 fallas hacen ruidosa la métrica | La deriva se presenta como alerta de operación fuera de lo visto, no como prueba de degradación |
 
-Pruebas: 15 (`pytest`): datos, split cronológico, folds, limpieza sin fuga, costos, umbral, PSI, API (7) y dashboard (1). El módulo C-MAPSS se trasladó a [predictive-maintenance-survival-cmapss](https://github.com/jesusgonzalezmexdata-ux/predictive-maintenance-survival-cmapss).
+Pruebas: 15 (`pytest`): datos, split cronológico, folds, limpieza sin fuga, costos, umbral, PSI, API (7) y dashboard (1). El módulo C-MAPSS se trasladó a [predictive-maintenance-survival-cmapss](https://github.com/jesusrlgonzalez/predictive-maintenance-survival-cmapss).

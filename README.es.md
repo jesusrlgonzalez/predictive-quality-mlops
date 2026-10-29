@@ -2,9 +2,9 @@
 
 *[English](README.md) · Español*
 
-**[Demo en vivo](https://huggingface.co/spaces/JesusRLGonzalez/predictive-quality-mlops)** | **[Página del proyecto](https://jesusgonzalezmexdata-ux.github.io/predictive-quality-mlops/)**
+**[Demo en vivo](https://huggingface.co/spaces/JesusRLGonzalez/predictive-quality-mlops)** | **[Página del proyecto](https://jesusrlgonzalez.github.io/predictive-quality-mlops/)**
 
-**Sistema de soporte a decisiones de calidad industrial, de punta a punta:** predice qué lotes de semiconductores (SECOM) tienen riesgo de falla, traduce el resultado a pesos ahorrados o gastados, lo expone como API y dashboard, y vigila su propia degradación. El mantenimiento predictivo con NASA C-MAPSS está en su propio repositorio: [predictive-maintenance-survival-cmapss](https://github.com/jesusgonzalezmexdata-ux/predictive-maintenance-survival-cmapss).
+**Sistema de soporte a decisiones de calidad industrial, de punta a punta:** predice qué lotes de semiconductores (SECOM) tienen riesgo de falla, traduce el resultado a pesos ahorrados o gastados, lo expone como API y dashboard, y vigila su propia degradación. El mantenimiento predictivo con NASA C-MAPSS está en su propio repositorio: [predictive-maintenance-survival-cmapss](https://github.com/jesusrlgonzalez/predictive-maintenance-survival-cmapss).
 
 ## Resumen ejecutivo
 Este sistema convierte datos de 590 sensores en una **decisión por lote** (liberar, vigilar, retener) con su acción y su referencia ISO 9001, mide el efecto en **costo de la no calidad (COPQ)** y avisa cuándo el modelo deja de ser confiable. El diferenciador no es el algoritmo: es la **taxonomía de decisión**, la **incertidumbre visible** y el **log de escrutinio** de lo que falló y se corrigió.
