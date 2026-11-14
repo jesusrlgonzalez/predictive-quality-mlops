@@ -127,5 +127,9 @@ def test_runs_with_the_stub_pyarrow_of_the_browser(monkeypatch):
     import importlib
 
     importlib.reload(vb)
-    df, variables, _ = vi.validate(vi.example("Inyección de plástico · señal moderada, 10 meses de datos"))
-    assert vb.evaluate(df, variables, FAST)["evaluable"]
+    # En el navegador pandas nunca ve un pyarrow utilizable, así que guarda el texto con almacenamiento «python».
+    # Aquí pyarrow real ya se cargó antes del stub; sin fijar el almacenamiento, pandas ≥ 3 crearía arreglos
+    # Arrow y luego buscaría pa.types en el stub, un estado que no existe en stlite.
+    with pd.option_context("mode.string_storage", "python"):
+        df, variables, _ = vi.validate(vi.example("Inyección de plástico · señal moderada, 10 meses de datos"))
+        assert vb.evaluate(df, variables, FAST)["evaluable"]
