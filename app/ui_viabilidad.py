@@ -50,6 +50,9 @@ def render():
     st.markdown("Antes de invertir en un modelo predictivo, sube el histórico de lotes de tu proceso y obtén un dictamen de una página: "
                 "**desplegar, no desplegar o recolectar más datos**, con hallazgos en lenguaje de auditoría (criterio, evidencia, "
                 "resultado, riesgo). **El archivo se procesa en tu navegador: no se envía a ningún servidor.**")
+    st.caption("Aviso de uso de datos: para funcionar, la página descarga bibliotecas y tipografías de servicios públicos "
+               "(jsDelivr, PyPI, Google Fonts), que reciben tu dirección IP y datos técnicos de tu navegador, pero no tu "
+               "archivo. No subas datos personales ni confidenciales sin autorización de tu empresa.")
     a, b = st.columns([1, 2])
     a.download_button("Descargar plantilla de Excel (con datos de ejemplo)", _template(), "plantilla_lotes.xlsx",
                       "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
