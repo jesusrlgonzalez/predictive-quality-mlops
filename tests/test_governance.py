@@ -44,6 +44,13 @@ def test_cifras_del_informe_coinciden_con_las_metricas():
     assert not faltan, faltan
 
 
+def test_el_informe_separa_clasificacion_de_recomendacion():
+    texto = (ROOT / "GOVERNANCE_REPORT.md").read_text(encoding="utf-8")
+    assert texto.startswith("# Recolectar más datos; no desplegar hoy")
+    assert "| Clasificación algorítmica | **RECOLECTAR MÁS DATOS** |" in texto
+    assert "| Recomendación operativa | **No desplegar hoy** |" in texto
+
+
 def test_readme_no_promete_ahorro_demostrado():
     for nombre in ("README.md", "README.es.md"):
         texto = (ROOT / nombre).read_text(encoding="utf-8")

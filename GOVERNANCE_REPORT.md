@@ -1,12 +1,19 @@
-# Recomendación de no despliegue: riesgo económico
+# Recolectar más datos; no desplegar hoy
 
 **Caso evaluado:** histórico, datos públicos UCI SECOM (1,567 lotes de una línea de semiconductores, 19 jul – 17 oct 2008). No es una planta en operación ni un cliente.
 **Fecha del análisis:** resultados de `reports/metrics.json` (holdout cronológico evaluado una sola vez); reproducidos desde cero en una copia aislada el 20 nov 2026 con cifras idénticas.
 **Autor:** Jesús R. L. González · **Costos:** supuestos ilustrativos en MXN (`src/pqm/config.py`), no costos de una empresa.
 
-## Recomendación
+## Dictamen
 
-**No desplegar el modelo ahora.** Con la regla de dictamen del propio proyecto (`pqm.viability.verdict`, la misma que usa la demo), el caso histórico queda en **RECOLECTAR MÁS DATOS**: el ahorro estimado es positivo, pero su intervalo incluye pérdidas y ganancias, así que **no se ha demostrado un beneficio económico positivo**. Para demostrarlo harían falta ≈ 278 fallas en el periodo evaluado, unos 9 meses más al ritmo observado (536 lotes por mes), dentro del plazo máximo de 24 meses que fija la regla. Mientras tanto, la mejor alternativa simple sigue siendo la referencia.
+| Nivel | Resultado | Quién lo emite |
+|---|---|---|
+| Clasificación algorítmica | **RECOLECTAR MÁS DATOS** | La regla del proyecto (`pqm.viability.verdict`, la misma que usa la demo), aplicada a las métricas publicadas |
+| Recomendación operativa | **No desplegar hoy** | Decisión de gobierno que se sigue de esa clasificación; la toma una persona, no el algoritmo |
+
+**Por qué la regla clasifica así.** El ahorro estimado es positivo, pero su intervalo incluye pérdidas y ganancias, así que **no se ha demostrado un beneficio económico positivo**. Para demostrarlo harían falta ≈ 278 fallas en el periodo evaluado, unos 9 meses más al ritmo observado (536 lotes por mes), dentro del plazo máximo de 24 meses que fija la regla.
+
+**Por qué la recomendación es no desplegar hoy.** Desplegar antes de reunir esa evidencia expondría la línea a un costo que puede ser mayor que el de la referencia. Mientras tanto, la mejor alternativa simple sigue siendo la referencia y se siguen recolectando datos.
 
 Esto no significa que el modelo «cause pérdidas» ni que el beneficio sea cero. Tampoco es una regla para toda fábrica: con otros costos, otra señal u otro proceso, el dictamen puede ser distinto.
 
