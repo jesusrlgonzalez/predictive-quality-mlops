@@ -28,12 +28,3 @@ class CostosCalidad:
     def inspeccionar_todo(self, y_true) -> float:
         n, p = len(y_true), int(sum(y_true))
         return float(n * self.inspeccion + p * self.retrabajo_detectado)
-
-
-@dataclass(frozen=True)
-class CostosMantenimiento:
-    """Costos de reemplazo de motor (unidades arbitrarias). Supuestos ilustrativos."""
-    correctivo: float = 100.0      # falla en servicio
-    preventivo: float = 15.0       # reemplazo planeado
-    vida_perdida_por_ciclo: float = 0.12  # valor de cada ciclo útil que se desecha
-    horizonte: int = 30            # ciclos hasta la siguiente oportunidad de revisión

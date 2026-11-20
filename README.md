@@ -9,7 +9,7 @@
 ## Executive summary
 The system turns data from 590 sensors into a **decision per lot** (release, monitor, hold) with its action and its ISO 9001 reference, measures the effect on **cost of poor quality (COPQ)** and warns when the model stops being reliable. The differentiator is not the algorithm: it is the **decision taxonomy**, the **visible uncertainty** and the **scrutiny log** of what failed and was corrected.
 
-> **What this project shows, and what it does not.** SECOM has a real but weak signal: the model ranks lots better than chance, but the economic saving is **not statistically demonstrated** (95 % CI of the saving: −22k to +20k MXN on 313 lots). It is reported that way on purpose. The contribution is the method, leakage-free validation and the engineering, not an inflated figure.
+> **What this project shows, and what it does not.** SECOM has, at best, a weak signal: on point estimates the model ranks lots better than chance (ROC-AUC 0.62; PR-AUC 0.089 against a 0.054 failure rate), but the PR-AUC interval (0.043–0.197) still includes chance, and the economic saving is **not statistically demonstrated**: its 95 % CI (−22k to +20k MXN on 313 lots) includes both losses and gains. Under the project's own verdict rule the historical case is **collect more data** (≈ 278 failures, ≈ 9 more months), so the recommendation today is not to deploy; see the one-page [governance report](GOVERNANCE_REPORT.md) (Spanish). It is reported that way on purpose. The contribution is the method, leakage-free validation and the engineering, not an inflated figure.
 
 ![Dashboard](docs/img/dashboard_impacto.png)
 
@@ -160,7 +160,7 @@ data/raw → pqm.data → SensorCleaner (fit on train only: constants, >50 % NaN
 ## 5. How to run it
 ```bash
 pip install -r requirements-dev.txt
-make test        # 15 tests
+make test        # 40 tests
 make train       # ~2 min: trains, evaluates, writes models/ and reports/ (MLflow in mlflow.db)
 make evidence    # cost vs threshold, stress and holdout explanations (~30 s)
 make api         # http://localhost:8000/docs

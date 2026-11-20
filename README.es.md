@@ -9,7 +9,7 @@
 ## Resumen ejecutivo
 Este sistema convierte datos de 590 sensores en una **decisión por lote** (liberar, vigilar, retener) con su acción y su referencia ISO 9001, mide el efecto en **costo de la no calidad (COPQ)** y avisa cuándo el modelo deja de ser confiable. El diferenciador no es el algoritmo: es la **taxonomía de decisión**, la **incertidumbre visible** y el **log de escrutinio** de lo que falló y se corrigió.
 
-> **Lo que este proyecto demuestra, y lo que no.** Con SECOM hay señal real pero débil: el modelo ordena los lotes mejor que el azar, pero el ahorro económico **no está estadísticamente demostrado** (IC95 % del ahorro: −22 k a +20 k MXN en 313 lotes). Se reporta así a propósito. La contribución es el método, la validación sin fuga de información y la ingeniería, no una cifra inflada.
+> **Lo que este proyecto demuestra, y lo que no.** Con SECOM hay, como mucho, una señal débil: en estimación puntual el modelo ordena los lotes mejor que el azar (ROC-AUC 0.62; PR-AUC 0.089 frente a una tasa de falla de 0.054), pero el intervalo de la PR-AUC (0.043–0.197) aún incluye el azar, y el ahorro económico **no está estadísticamente demostrado**: su IC95 % (−22 k a +20 k MXN en 313 lotes) incluye pérdidas y ganancias. Con la regla de dictamen del propio proyecto, el caso histórico queda en **recolectar más datos** (≈ 278 fallas, ≈ 9 meses más), así que hoy la recomendación es no desplegar; ver el [informe de gobierno](GOVERNANCE_REPORT.md) de una página. Se reporta así a propósito. La contribución es el método, la validación sin fuga de información y la ingeniería, no una cifra inflada.
 
 ![Dashboard](docs/img/dashboard_impacto.png)
 
@@ -159,7 +159,7 @@ data/raw → pqm.data → SensorCleaner (fit solo en train: constantes, >50 % Na
 ## 5. Cómo ejecutarlo
 ```bash
 pip install -r requirements-dev.txt
-make test        # 15 pruebas
+make test        # 40 pruebas
 make train       # ~2 min: entrena, evalúa, escribe models/ y reports/ (MLflow en mlflow.db)
 make evidence    # costo vs umbral, estrés y explicaciones del holdout (~30 s)
 make api         # http://localhost:8000/docs
