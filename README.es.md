@@ -159,7 +159,7 @@ data/raw → pqm.data → SensorCleaner (fit solo en train: constantes, >50 % Na
 ## 5. Cómo ejecutarlo
 ```bash
 pip install -r requirements-dev.txt
-make test        # 40 pruebas
+make test        # 41 pruebas
 make train       # ~2 min: entrena, evalúa, escribe models/ y reports/ (MLflow en mlflow.db)
 make evidence    # costo vs umbral, estrés y explicaciones del holdout (~30 s)
 make api         # http://localhost:8000/docs
