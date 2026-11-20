@@ -9,7 +9,7 @@ All notable changes follow [Keep a Changelog](https://keepachangelog.com/en/1.1.
 - One-page governance report (`GOVERNANCE_REPORT.md`, Spanish): titled «Recolectar más datos; no desplegar hoy», it separates the algorithmic classification (the project's rule gives «recolectar más datos» on the historical SECOM case) from the operational recommendation (do not deploy today), alternatives, cost of error, re-evaluation and suspension criteria; `tests/test_governance.py` recomputes the verdict and checks every figure against `reports/metrics.json`.
 
 ### Documentation
-- README (EN/ES): the signal is described as weak with a PR-AUC interval that still includes chance; the benefit sentence states that the savings interval includes losses and gains and links the governance report; test count updated to 40.
+- README (EN/ES): the signal is described as weak with a PR-AUC interval that still includes chance; the benefit sentence states that the savings interval includes losses and gains and links the governance report; test count updated to 41.
 
 ### Removed
 - Unused `CostosMantenimiento` dataclass from `src/pqm/config.py`.
